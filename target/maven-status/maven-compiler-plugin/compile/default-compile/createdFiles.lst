@@ -1,6 +1,7 @@
 mg\manoa\iharivola\tpcustomermanoaiharivola19\resources\JakartaEE10Resource.class
 mg\manoa\iharivola\tpcustomermanoaiharivola19\service\CustomerManager.class
 mg\manoa\iharivola\tpcustomermanoaiharivola19\entity\MicroMarket.class
+mg\manoa\iharivola\tpcustomermanoaiharivola19\jsf\CustomerBean.class
 mg\manoa\iharivola\tpcustomermanoaiharivola19\entity\Customer.class
 mg\manoa\iharivola\tpcustomermanoaiharivola19\entity\Discount.class
 mg\manoa\iharivola\tpcustomermanoaiharivola19\config\ConfigJSF.class
