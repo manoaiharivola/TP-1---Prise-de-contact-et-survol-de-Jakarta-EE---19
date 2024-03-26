@@ -6,10 +6,13 @@ package mg.manoa.iharivola.tpcustomermanoaiharivola19.jsf;
 
 import mg.manoa.iharivola.tpcustomermanoaiharivola19.entity.Customer;
 import mg.manoa.iharivola.tpcustomermanoaiharivola19.service.CustomerManager;
+import mg.manoa.iharivola.tpcustomermanoaiharivola19.entity.Discount;
+import mg.manoa.iharivola.tpcustomermanoaiharivola19.service.DiscountManager;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
 import jakarta.faces.view.ViewScoped;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  *
@@ -25,6 +28,9 @@ public class CustomerDetailsBean implements Serializable {
     @Inject
     private CustomerManager customerManager;
 
+    @Inject
+    private DiscountManager discountManager;
+
     public int getIdCustomer() {
         return idCustomer;
     }
@@ -36,7 +42,8 @@ public class CustomerDetailsBean implements Serializable {
     /**
      * Retourne les détails du client courant (contenu dans l'attribut customer
      * de cette classe).
-     * @return 
+     *
+     * @return
      */
     public Customer getCustomer() {
         return customer;
@@ -58,5 +65,14 @@ public class CustomerDetailsBean implements Serializable {
 
     public void loadCustomer() {
         this.customer = customerManager.findById(idCustomer);
+    }
+
+    /**
+     * Retourne la liste de tous les Discount.
+     *
+     * @return
+     */
+    public List<Discount> getDiscounts() {
+        return discountManager.getAllDiscounts();
     }
 }
