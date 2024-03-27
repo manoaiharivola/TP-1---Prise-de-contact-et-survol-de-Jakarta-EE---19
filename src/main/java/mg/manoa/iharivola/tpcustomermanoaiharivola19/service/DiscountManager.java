@@ -26,6 +26,11 @@ public class DiscountManager {
         Query query = em.createNamedQuery("Discount.findAll");
         return query.getResultList();
     }
+    
+    public List<Discount> getAllDiscountsOrderByRate() {
+        Query query = em.createNamedQuery("Discount.findAllOrderByRate");
+        return query.getResultList();
+    }
 
     public Discount findById(String code) {
         return em.find(Discount.class, code);

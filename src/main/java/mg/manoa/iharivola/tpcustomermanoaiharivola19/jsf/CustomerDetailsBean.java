@@ -73,6 +73,6 @@ public class CustomerDetailsBean implements Serializable {
      * @return
      */
     public List<Discount> getDiscounts() {
-        return discountManager.getAllDiscounts();
+        return discountManager.getAllDiscountsOrderByRate();
     }
 }
